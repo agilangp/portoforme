@@ -30,10 +30,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
     }
 
     return (
-        <nav
-            className="bg-white
-                dark:bg-gray-800 shadow-md"
-        >
+        <nav className="dark:bg-gray-800">
             <div className="container mx-auto py-4 px-4 sm:px-0 sm:w-4/5 flex flex-row items-center place-content-between">
                 <div className="flex flex-row items-center place-content-center">
                     <svg
@@ -52,6 +49,11 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </svg>
                     <span className="font-bold text-3xl ml-2">PortoForMe</span>
                 </div>
+                <div className="flex">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Project</p>
+                </div>
                 <div className="flex items-center place-content-center">
                     <Switch
                         checked={darkMode}
@@ -59,10 +61,10 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                         className={`${
                             darkMode
                                 ? "bg-orange-400 hover:bg-orange-700"
-                                : "bg-gray-200 hover:bg-orange-400 border-gray-600 "
-                        } relative inline-flex items-center h-6 rounded-full w-11 border-2`}
+                                : "bg-gray-600 hover:bg-orange-400 "
+                        } relative inline-flex items-center h-6 rounded-full w-11`}
                     >
-                        <span className="sr-only">Enable notifications</span>
+                        <span className="sr-only">Dark Mode</span>
                         <span
                             className={`${
                                 darkMode ? "translate-x-6" : "translate-x-1"
@@ -71,13 +73,10 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </Switch>{" "}
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`h-6 w-6 cursor-pointer hover:text-orange-400 ${
-                            darkMode ? "" : "hidden"
-                        }`}
+                        className={`h-6 w-6 ${darkMode ? "" : "hidden"}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        onClick={changeMode}
                     >
                         <path
                             strokeLinecap="round"
@@ -88,13 +87,12 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </svg>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`h-6 w-6 cursor-pointer hover:text-orange-400 ${
+                        className={`h-6 w-6 text-gray-600 ${
                             darkMode ? "hidden" : ""
                         }`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        onClick={changeMode}
                     >
                         <path
                             strokeLinecap="round"
@@ -105,6 +103,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </svg>
                 </div>
             </div>
+            <hr />
         </nav>
     )
 }
