@@ -5,7 +5,7 @@ const Home: NextPage = () => {
     return (
         <Layout>
             <div>
-                <p>Hey there, it's me</p>
+                <p>Hey there, it is me</p>
                 <p>ye Boi...</p>
             </div>
         </Layout>
