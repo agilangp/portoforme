@@ -5,10 +5,10 @@ const Header = () => {
         <Head>
             <title>Welcome - Come Take a Look!</title>
             <meta name="author" content="Alwin Gilang Permana" />
-            <meta name="description" content="Just Simple Portofolio App" />
+            <meta name="description" content="Just a Simple Portofolio App" />
             <meta
                 name="keywords"
-                content="NextJS, Prisma, Portofolio, Gilang"
+                content="NextJS, Prisma, Portofolio, Alwin, Gilang, Permana"
             />
             <meta
                 name="viewport"

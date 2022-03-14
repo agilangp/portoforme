@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { useEffect } from "react"
-import { Switch } from "@headlessui/react"
+import { Menu, Switch } from "@headlessui/react"
 
 interface NavbarProps {
     darkMode: boolean
@@ -30,7 +30,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
     }
 
     return (
-        <nav className="dark:bg-gray-800">
+        <nav className="dark:bg-slate-800">
             <div className="container mx-auto py-4 px-4 sm:px-0 sm:w-4/5 flex flex-row items-center place-content-between">
                 <div className="flex flex-row items-center place-content-center">
                     <svg
@@ -49,10 +49,22 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </svg>
                     <span className="font-bold text-3xl ml-2">PortoForMe</span>
                 </div>
-                <div className="flex">
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Project</p>
+                <div className="md:flex hidden">
+                    <UserLink href="/" className="p-3 font-semibold text-lg">
+                        Home
+                    </UserLink>
+                    <UserLink
+                        href="/about"
+                        className="p-3 font-semibold text-lg"
+                    >
+                        About
+                    </UserLink>
+                    <UserLink
+                        href="/projects"
+                        className="p-3 font-semibold text-lg"
+                    >
+                        Projects
+                    </UserLink>
                 </div>
                 <div className="flex items-center place-content-center">
                     <Switch
@@ -61,7 +73,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                         className={`${
                             darkMode
                                 ? "bg-orange-400 hover:bg-orange-700"
-                                : "bg-gray-600 hover:bg-orange-400 "
+                                : "bg-gray-800 hover:bg-orange-400 "
                         } relative inline-flex items-center h-6 rounded-full w-11`}
                     >
                         <span className="sr-only">Dark Mode</span>
@@ -87,9 +99,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </svg>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className={`h-6 w-6 text-gray-600 ${
-                            darkMode ? "hidden" : ""
-                        }`}
+                        className={`h-6 w-6 ${darkMode ? "hidden" : ""}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -101,6 +111,67 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                             d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                         />
                     </svg>
+                    <Menu>
+                        <Menu.Button>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 md:hidden cursor-pointer"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </Menu.Button>
+                        <Menu.Items className="absolute right-2 w-32 top-16 mt-3 origin-top-right divide-y divide-gray-400 rounded-md shadow-lg ring-2 ring-black ring-opacity-10 focus:outline-none">
+                            <div className="px-1 py-1">
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button
+                                            className={`${
+                                                active
+                                                    ? "bg-gray-800 text-white"
+                                                    : "text-gray-900"
+                                            } group flex rounded-md items-center w-full px-2 py-2 text-sm font-semibold`}
+                                        >
+                                            Home
+                                        </button>
+                                    )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button
+                                            className={`${
+                                                active
+                                                    ? "bg-gray-800 text-white"
+                                                    : "text-gray-900"
+                                            } group flex rounded-md items-center w-full px-2 py-2 text-sm font-semibold`}
+                                        >
+                                            About
+                                        </button>
+                                    )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button
+                                            className={`${
+                                                active
+                                                    ? "bg-gray-800 text-white"
+                                                    : "text-gray-900"
+                                            } group flex rounded-md items-center w-full px-2 py-2 text-sm font-semibold`}
+                                        >
+                                            Projects
+                                        </button>
+                                    )}
+                                </Menu.Item>
+                            </div>
+                        </Menu.Items>
+                    </Menu>
                 </div>
             </div>
             <hr />

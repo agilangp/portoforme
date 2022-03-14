@@ -35,9 +35,13 @@ const Layout = ({ children }: LayoutProps) => {
     }
 
     return (
-        <div className={`${darkMode ? "dark" : ""} dark:text-white`}>
+        <div
+            className={`${
+                darkMode ? "dark" : ""
+            } dark:text-white text-gray-800`}
+        >
             <Header />
-            <main className="dark:bg-gray-800 dark:text-gray-300 h-screen">
+            <main className="dark:bg-slate-800 dark:text-gray-300 h-screen">
                 <Navbar changeMode={changeMode} darkMode={darkMode} />
                 <div className="py-4 container mx-auto px-4 sm:px-0 sm:w-4/5">
                     {children}
