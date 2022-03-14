@@ -50,18 +50,21 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     <span className="font-bold text-3xl ml-2">PortoForMe</span>
                 </div>
                 <div className="md:flex hidden">
-                    <UserLink href="/" className="p-3 font-semibold text-lg">
+                    <UserLink
+                        href="/"
+                        className="p-3 font-semibold text-lg hover:underline hover:text-black"
+                    >
                         Home
                     </UserLink>
                     <UserLink
                         href="/about"
-                        className="p-3 font-semibold text-lg"
+                        className="p-3 font-semibold text-lg hover:underline hover:text-black"
                     >
                         About
                     </UserLink>
                     <UserLink
                         href="/projects"
-                        className="p-3 font-semibold text-lg"
+                        className="p-3 font-semibold text-lg hover:underline hover:text-black"
                     >
                         Projects
                     </UserLink>
@@ -139,7 +142,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                                                     : "text-gray-900"
                                             } group flex rounded-md items-center w-full px-2 py-2 text-sm font-semibold`}
                                         >
-                                            Home
+                                            <UserLink href="/">Home</UserLink>
                                         </button>
                                     )}
                                 </Menu.Item>
@@ -152,7 +155,9 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                                                     : "text-gray-900"
                                             } group flex rounded-md items-center w-full px-2 py-2 text-sm font-semibold`}
                                         >
-                                            About
+                                            <UserLink href="/about">
+                                                About
+                                            </UserLink>
                                         </button>
                                     )}
                                 </Menu.Item>
@@ -165,7 +170,9 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                                                     : "text-gray-900"
                                             } group flex rounded-md items-center w-full px-2 py-2 text-sm font-semibold`}
                                         >
-                                            Projects
+                                            <UserLink href="/projects">
+                                                Projects
+                                            </UserLink>
                                         </button>
                                     )}
                                 </Menu.Item>

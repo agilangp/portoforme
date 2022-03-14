@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import Footer from "./Footer"
 import Header from "./Header"
 import Navbar from "./Navbar"
 
@@ -46,6 +47,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <div className="py-4 container mx-auto px-4 sm:px-0 sm:w-4/5">
                     {children}
                 </div>
+                <Footer />
             </main>
         </div>
     )

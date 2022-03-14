@@ -4,7 +4,10 @@ import Layout from "./components/Layout"
 const Home: NextPage = () => {
     return (
         <Layout>
-            <p>Home</p>
+            <div>
+                <p>Hey there, it's me</p>
+                <p>ye Boi...</p>
+            </div>
         </Layout>
     )
 }
