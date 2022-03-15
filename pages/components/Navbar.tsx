@@ -49,24 +49,24 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </svg>
                     <span className="font-bold text-3xl ml-2">PortoForMe</span>
                 </div>
-                <div className="md:flex hidden">
+                <div className="md:flex hidden text-sm">
                     <UserLink
                         href="/"
-                        className="p-3 font-semibold text-lg hover:underline hover:text-black"
+                        className="p-3 font-semibold hover:underline hover:text-black"
                     >
-                        Home
+                        HOME
                     </UserLink>
                     <UserLink
                         href="/about"
-                        className="p-3 font-semibold text-lg hover:underline hover:text-black"
+                        className="p-3 font-semibold hover:underline hover:text-black"
                     >
-                        About
+                        ABOUT
                     </UserLink>
                     <UserLink
                         href="/projects"
-                        className="p-3 font-semibold text-lg hover:underline hover:text-black"
+                        className="p-3 font-semibold hover:underline hover:text-black"
                     >
-                        Projects
+                        PROJECTS
                     </UserLink>
                 </div>
                 <div className="flex items-center place-content-center">
@@ -181,7 +181,6 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </Menu>
                 </div>
             </div>
-            <hr />
         </nav>
     )
 }
