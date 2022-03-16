@@ -19,7 +19,7 @@ const Home: NextPage = () => {
                         Software Developer
                     </p>
                     <div className="my-4 flex flex-wrap gap-2">
-                        <Link href="facebook.com">
+                        <Link href="https://web.facebook.com/al.gilang.p">
                             <a>
                                 <button className="hover:bg-orange-200 border-2 border-gray-800 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
                                     <svg
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                                 </button>
                             </a>
                         </Link>
-                        <Link href="twitter.com">
+                        <Link href="https://twitter.com/alwin_gilang">
                             <a>
                                 <button className="hover:bg-orange-200 border-2 border-gray-800 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
                                     <svg
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                                 </button>
                             </a>
                         </Link>
-                        <Link href="github.com">
+                        <Link href="https://github.com/al-gilang-p">
                             <a>
                                 <button className="hover:bg-orange-200 border-2 border-gray-800 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
                                     <svg
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
                                 </button>
                             </a>
                         </Link>
-                        <Link href="linkedin.com">
+                        <Link href="https://www.linkedin.com/in/alwin-gilang-permana-53674b170/">
                             <a>
                                 <button className="hover:bg-orange-200 border-2 border-gray-800 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
                                     <svg
