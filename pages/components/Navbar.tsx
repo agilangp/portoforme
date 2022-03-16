@@ -31,8 +31,8 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
 
     return (
         <nav className="dark:bg-slate-800">
-            <div className="container mx-auto py-4 px-4 sm:px-0 sm:w-4/5 flex flex-row items-center place-content-between">
-                <div className="flex flex-row items-center place-content-center">
+            <div className="container mx-auto py-4 px-4 sm:px-0 sm:w-9/12 flex flex-wrap items-center place-content-between">
+                <div className="flex items-center place-content-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
@@ -47,7 +47,9 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         />
                     </svg>
-                    <span className="font-bold text-3xl ml-2">PortoForMe</span>
+                    <span className="font-bold text-3xl ml-2">
+                        PortoFor<span className="text-orange-600">Me</span>
+                    </span>
                 </div>
                 <div className="md:flex hidden text-sm">
                     <UserLink
@@ -131,7 +133,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                                 />
                             </svg>
                         </Menu.Button>
-                        <Menu.Items className="absolute right-2 w-32 top-16 mt-3 origin-top-right divide-y divide-gray-400 rounded-md shadow-lg ring-2 ring-black ring-opacity-10 focus:outline-none">
+                        <Menu.Items className="absolute right-2 w-32 top-12 mt-3 origin-top-right divide-y divide-gray-400 rounded-md shadow-lg ring-2 ring-black ring-opacity-10 focus:outline-none">
                             <div className="px-1 py-1">
                                 <Menu.Item>
                                     {({ active }) => (

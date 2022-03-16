@@ -44,7 +44,7 @@ const Layout = ({ children }: LayoutProps) => {
             <Header />
             <main className="dark:bg-slate-800 dark:text-gray-300 h-screen">
                 <Navbar changeMode={changeMode} darkMode={darkMode} />
-                <div className="py-4 container mx-auto px-4 sm:px-0 sm:w-4/5">
+                <div className="py-4 container mx-auto px-4 sm:px-0 sm:w-9/12">
                     {children}
                 </div>
                 <Footer />
