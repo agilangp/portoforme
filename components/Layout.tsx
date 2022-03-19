@@ -42,9 +42,10 @@ const Layout = ({ children }: LayoutProps) => {
             } dark:text-white text-gray-800`}
         >
             <Header />
-            <main className="dark:bg-slate-800 dark:text-gray-300 h-screen">
+            <main className="dark:bg-zinc-900 dark:text-gray-300 h-screen">
                 <Navbar changeMode={changeMode} darkMode={darkMode} />
-                <div className="py-4 container mx-auto px-4 sm:px-0 sm:w-9/12">
+                <hr className="dark:border-zinc-800" />
+                <div className="py-6 container mx-auto px-4 sm:px-0 sm:w-9/12">
                     {children}
                 </div>
                 <Footer />

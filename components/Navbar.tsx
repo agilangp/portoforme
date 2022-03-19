@@ -30,45 +30,42 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
     }
 
     return (
-        <nav className="dark:bg-slate-800">
+        <nav className="shadow-sm">
             <div className="container mx-auto py-4 px-4 sm:px-0 sm:w-9/12 flex flex-wrap items-center place-content-between">
-                <div className="flex items-center place-content-center">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 22 22"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                    </svg>
-                    <span className="font-bold text-3xl ml-2">
-                        PortoFor<span className="text-orange-600">Me</span>
-                    </span>
-                </div>
+                <UserLink href="/">
+                    <div className="flex items-center place-content-center hover:text-orange-500 cursor-pointer">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 22 22"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                        </svg>
+                        <span className="font-bold text-3xl ml-2">
+                            PortoFor
+                            <span className="text-orange-500">Me</span>
+                        </span>
+                    </div>
+                </UserLink>
                 <div className="md:flex hidden text-sm">
-                    <UserLink
-                        href="/"
-                        className="p-3 font-semibold hover:underline hover:text-black"
-                    >
-                        HOME
-                    </UserLink>
-                    <UserLink
-                        href="/about"
-                        className="p-3 font-semibold hover:underline hover:text-black"
-                    >
-                        ABOUT
-                    </UserLink>
                     <UserLink
                         href="/projects"
                         className="p-3 font-semibold hover:underline hover:text-black"
                     >
                         PROJECTS
+                    </UserLink>
+                    <UserLink
+                        href="https://github.com/al-gilang-p"
+                        className="p-3 font-semibold hover:underline hover:text-black"
+                    >
+                        SOURCES
                     </UserLink>
                 </div>
                 <div className="flex items-center place-content-center">
@@ -77,8 +74,8 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                         onChange={changeMode}
                         className={`${
                             darkMode
-                                ? "bg-orange-400 hover:bg-orange-700"
-                                : "bg-gray-800 hover:bg-orange-400 "
+                                ? "bg-orange-500 hover:bg-black"
+                                : "bg-gray-800 hover:bg-orange-500 "
                         } relative inline-flex items-center h-6 rounded-full w-11`}
                     >
                         <span className="sr-only">Dark Mode</span>
@@ -133,7 +130,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                                 />
                             </svg>
                         </Menu.Button>
-                        <Menu.Items className="absolute right-2 w-32 top-12 mt-3 origin-top-right divide-y divide-gray-400 rounded-md shadow-lg ring-2 ring-black ring-opacity-10 focus:outline-none">
+                        <Menu.Items className="absolute right-2 w-32 top-12 mt-7 origin-top-right divide-y divide-gray-400 rounded-md shadow-lg ring-2 ring-black ring-opacity-10 focus:outline-none">
                             <div className="px-1 py-1">
                                 <Menu.Item>
                                     {({ active }) => (
