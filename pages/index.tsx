@@ -86,6 +86,36 @@ const Home: NextPage = () => {
                     </div>
                 </div>
             </div>
+            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+                <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
+                    Bio
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td className="pr-4 text-right">1995</td>
+                            <td className="font-semibold">
+                                Born in Madiun Municipality, East Java,
+                                Indonesia
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="pr-4 text-right">2018</td>
+                            <td className="font-semibold">
+                                Completed Undergraduate Degree of Statistical
+                                Computation in Politeknik Statistika - Sekolah
+                                Tinggi Ilmu Statistik (PS-STIS)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="pr-4 text-right">2018 - present</td>
+                            <td className="font-semibold">
+                                Works at Badan Pusat Statistik
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </Layout>
     )
 }

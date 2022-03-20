@@ -39,14 +39,16 @@ const Layout = ({ children }: LayoutProps) => {
         <div
             className={`${
                 darkMode ? "dark" : ""
-            } dark:text-white text-gray-800`}
+            } dark:text-gray-300 text-gray-800`}
         >
             <Header />
-            <main className="dark:bg-zinc-900 dark:text-gray-300 h-screen">
-                <Navbar changeMode={changeMode} darkMode={darkMode} />
-                <hr className="dark:border-zinc-800" />
-                <div className="py-6 container mx-auto px-4 sm:px-0 sm:w-9/12">
-                    {children}
+            <main className="dark:bg-zinc-900 dark:text-gray-300 h-screen flex flex-col justify-between">
+                <div>
+                    <Navbar changeMode={changeMode} darkMode={darkMode} />
+                    <hr className="dark:border-zinc-800" />
+                    <div className="my-6 container mx-auto px-4 sm:px-0 sm:w-9/12">
+                        {children}
+                    </div>
                 </div>
                 <Footer />
             </main>
