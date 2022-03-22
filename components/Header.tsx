@@ -8,7 +8,7 @@ const Header = () => {
             <meta name="description" content="Just a Simple Portofolio App" />
             <meta
                 name="keywords"
-                content="NextJS, Prisma, Portofolio, Alwin, Gilang, Permana"
+                content="NextJS, Portofolio, Alwin, Gilang, Permana"
             />
             <meta
                 name="viewport"
