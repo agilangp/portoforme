@@ -113,7 +113,7 @@ const Home: NextPage = () => {
             </div>
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
                 <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
-                    Work
+                    About
                 </p>
                 <p>
                     <b className="text-orange-500">Gilang</b> is a man of focus,
@@ -137,7 +137,7 @@ const Home: NextPage = () => {
                 <table>
                     <tbody>
                         <tr>
-                            <td className="pr-4">1995</td>
+                            <td className="pr-4 pb-4">1995</td>
                             <td className="font-semibold pb-4">
                                 Born in Madiun Municipality, East Java,
                                 Indonesia
@@ -154,7 +154,7 @@ const Home: NextPage = () => {
                             </td>
                         </tr>
                         <tr>
-                            <td className="pr-4">2018 - present</td>
+                            <td className="pr-4 pt-4">2018 - present</td>
                             <td className="font-semibold pt-4">
                                 Works at Badan Pusat Statistik
                             </td>
