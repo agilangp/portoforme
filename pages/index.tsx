@@ -162,6 +162,12 @@ const Home: NextPage = () => {
                     </tbody>
                 </table>
             </div>
+
+            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+                <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
+                    Tech Stack
+                </p>
+            </div>
         </Layout>
     )
 }
