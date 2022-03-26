@@ -167,6 +167,15 @@ const Home: NextPage = () => {
                 <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Tech Stack
                 </p>
+                <ul className="list-disc list-inside italic">
+                    <li>
+                        NextJS, Prisma, PostgreSQL <b>(Preferred)</b>
+                    </li>
+                    <li>
+                        PHP, Laravel, MySQL
+                    </li>
+                    <li>NodeJS, Express, MySQL</li>
+                </ul>
             </div>
         </Layout>
     )
