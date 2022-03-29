@@ -60,7 +60,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                     </a>
                 </Link>
                 <div className="md:flex hidden text-sm">
-                    <ShortLink href="/projects">PROJECTS</ShortLink>
+                    <ShortLink href="/project">PROJECT</ShortLink>
                     <ShortLink
                         href="https://github.com/al-gilang-p"
                         target="_blank"
