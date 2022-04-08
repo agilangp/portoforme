@@ -18,16 +18,18 @@ const Home: NextPage = () => {
     }
     return (
         <Layout>
-            <div className="grid grid-cols-4 h-1/3 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <div className="basis-1/2 w-full h-full relative">
-                    <Image
-                        src="https://github.com/al-gilang-p.png"
-                        alt="Picture of the author"
-                        layout="fill"
-                        className="rounded-l-xl aspect-square object-cover"
-                    />
+            <div className="sm:grid sm:grid-cols-4 flex flex-col rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+                <div className="flex flex-wrap justify-center pt-4 sm:pt-0">
+                    <div className="w-80 h-80 sm:w-full sm:h-full relative fill-current">
+                        <Image
+                            src="https://github.com/al-gilang-p.png"
+                            alt="Picture of the author"
+                            layout="fill"
+                            className="sm:rounded-l-xl sm:rounded-r-none sm:rounded-t-none rounded-full aspect-square object-cover"
+                        />
+                    </div>
                 </div>
-                <div className="w-full object-fill col-span-3 flex flex-col place-content-between">
+                <div className="w-full object-fill sm:col-span-3 flex flex-col place-content-between text-center sm:text-left">
                     <div className="p-4">
                         <p className="uppercase font-bold text-4xl">
                             Alwin{" "}
@@ -37,11 +39,11 @@ const Home: NextPage = () => {
                         <p className="font-semibold text-xl dark:text-zinc-400 italic">
                             Software Developer
                         </p>
-                        <p className="font-medium text-2xl py-8 text-right">{`"Here lies My Hopes and Dreams about something I truly love. I know it ain't much, but it's honest work"`}</p>
+                        <p className="font-medium text-2xl py-8 sm:text-right">{`"Here lies My Hopes and Dreams about something I truly love. I know it ain't much, but it's honest work"`}</p>
                     </div>
                     <div>
                         <hr className="dark:border-zinc-800" />
-                        <div className="flex flex-wrap gap-1 p-4">
+                        <div className="flex flex-wrap sm:gap-1 gap-5 p-4 justify-center sm:justify-start">
                             <IconLink href="https://www.instagram.com/alwin_gilang/">
                                 <svg
                                     className="h-6 w-6 fill-current"
@@ -171,9 +173,7 @@ const Home: NextPage = () => {
                     <li>
                         NextJS, Prisma, PostgreSQL <b>(Preferred)</b>
                     </li>
-                    <li>
-                        PHP, Laravel, MySQL
-                    </li>
+                    <li>PHP, Laravel, MySQL</li>
                     <li>NodeJS, Express, MySQL</li>
                 </ul>
             </div>
