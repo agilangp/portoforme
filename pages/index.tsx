@@ -8,8 +8,12 @@ const Home: NextPage = () => {
         let { href, children, ...rest } = props
         return (
             <Link href={href}>
-                <a {...rest} target="_blank">
-                    <button className="hover:bg-black hover:text-white border-2 dark:border-orange-500 dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-zinc-900 border-zinc-800 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
+                <a
+                    {...rest}
+                    target="_blank"
+                    className="grow sm:grow-0 border-2 dark:border-orange-500 border-zinc-800"
+                >
+                    <button className="hover:bg-black hover:text-white dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-zinc-900 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
                         {children}
                     </button>
                 </a>
@@ -43,7 +47,7 @@ const Home: NextPage = () => {
                     </div>
                     <div>
                         <hr className="dark:border-zinc-800" />
-                        <div className="flex flex-wrap sm:gap-1 gap-5 p-4 justify-center sm:justify-start">
+                        <div className="flex flex-wrap sm:gap-2 p-4 justify-center sm:justify-start">
                             <IconLink href="https://www.instagram.com/alwin_gilang/">
                                 <svg
                                     className="h-6 w-6 fill-current"
@@ -114,10 +118,10 @@ const Home: NextPage = () => {
                 </div>
             </div>
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
+                <p className="sm:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     About
                 </p>
-                <p>
+                <p className="text-justify">
                     <b className="text-orange-500">Gilang</b> is a man of focus,
                     commitment, and sheer f.., ohhkaaay.. I think those words is
                     a bit too much for me. Just trying to emphasize that I
@@ -133,7 +137,7 @@ const Home: NextPage = () => {
                 </p>
             </div>
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
+                <p className="sm:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Bio
                 </p>
                 <table>
@@ -166,7 +170,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <p className="mb-2 font-semibold underline text-2xl decoration-orange-500">
+                <p className="sm:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Tech Stack
                 </p>
                 <ul className="list-disc list-inside italic">
