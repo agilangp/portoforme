@@ -114,7 +114,8 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                         />
                     </svg>
                 </div>
-            </div>
+            </div>{" "}
+            <hr className="dark:border-zinc-800" />
         </nav>
     )
 }
