@@ -11,9 +11,9 @@ const Home: NextPage = () => {
                 <a
                     {...rest}
                     target="_blank"
-                    className="grow sm:grow-0 border-2 dark:border-orange-500 border-zinc-800"
+                    className="grow lg:grow-0 border-2 dark:border-orange-500 border-zinc-800 text-center"
                 >
-                    <button className="hover:bg-black hover:text-white dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-zinc-900 p-2 font-semibold text-gray-800 inline-flex items-center space-x-2 rounded">
+                    <button className="hover:bg-black hover:text-white dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-zinc-900 p-2 font-semibold text-gray-800 inline-flex space-x-2 rounded">
                         {children}
                     </button>
                 </a>
@@ -22,18 +22,18 @@ const Home: NextPage = () => {
     }
     return (
         <Layout>
-            <div className="sm:grid sm:grid-cols-4 flex flex-col rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <div className="flex flex-wrap justify-center pt-4 sm:pt-0">
-                    <div className="w-80 h-80 sm:w-full sm:h-full relative fill-current">
+            <div className="lg:grid lg:grid-cols-4 flex flex-col rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+                <div className="flex flex-wrap justify-center pt-4 lg:pt-0">
+                    <div className="w-80 h-80 lg:w-full lg:h-full relative fill-current">
                         <Image
                             src="https://github.com/al-gilang-p.png"
                             alt="Picture of the author"
                             layout="fill"
-                            className="sm:rounded-l-xl sm:rounded-r-none sm:rounded-t-none rounded-full aspect-square object-cover"
+                            className="lg:rounded-l-xl lg:rounded-r-none lg:rounded-t-none rounded-full aspect-square object-cover"
                         />
                     </div>
                 </div>
-                <div className="w-full object-fill sm:col-span-3 flex flex-col place-content-between text-center sm:text-left">
+                <div className="w-full object-fill sm:col-span-3 flex flex-col place-content-between text-center lg:text-left">
                     <div className="p-4">
                         <p className="uppercase font-bold text-4xl">
                             Alwin{" "}
@@ -43,11 +43,11 @@ const Home: NextPage = () => {
                         <p className="font-semibold text-xl dark:text-zinc-400 italic">
                             Software Developer
                         </p>
-                        <p className="font-medium text-2xl py-8 sm:text-right">{`"Here lies My Hopes and Dreams about something I truly love. I know it ain't much, but it's honest work"`}</p>
+                        <p className="font-medium text-2xl py-8 lg:text-right">{`"Here lies My Hopes and Dreams about something I truly love. I know it ain't much, but it's honest work"`}</p>
                     </div>
                     <div>
                         <hr className="dark:border-zinc-800" />
-                        <div className="flex flex-wrap sm:gap-2 p-4 justify-center sm:justify-start">
+                        <div className="flex flex-wrap gap-2 p-4 justify-center lg:justify-start">
                             <IconLink href="https://www.instagram.com/alwin_gilang/">
                                 <svg
                                     className="h-6 w-6 fill-current"
@@ -118,7 +118,7 @@ const Home: NextPage = () => {
                 </div>
             </div>
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <p className="sm:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
+                <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     About
                 </p>
                 <p className="text-justify">
@@ -137,7 +137,7 @@ const Home: NextPage = () => {
                 </p>
             </div>
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <p className="sm:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
+                <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Bio
                 </p>
                 <table>
@@ -170,7 +170,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
-                <p className="sm:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
+                <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Tech Stack
                 </p>
                 <ul className="list-disc list-inside italic">
