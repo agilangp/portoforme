@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { RefObject, useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { Switch } from "@headlessui/react"
 
 interface NavbarProps {
@@ -9,14 +9,15 @@ interface NavbarProps {
 
 const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
-    const dropdown = useRef<HTMLDivElement>(null)
+    const menu = useRef<HTMLDivElement>(null)
 
+    // click outside div hook
     useEffect(() => {
         if (!menuIsOpen) return
 
         function handleClick(event: MouseEvent) {
             const target = event.target as HTMLDivElement
-            if (dropdown.current && !dropdown.current.contains(target)) {
+            if (menu.current && !menu.current.contains(target)) {
                 setMenuIsOpen(false)
             }
         }
@@ -157,7 +158,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
             <div
                 className={` ${menuIsOpen ? "" : "hidden"} text-sm text-center`}
                 id="menu"
-                ref={dropdown}
+                ref={menu}
             >
                 <PopUpMenuLink href="/project">PROJECT</PopUpMenuLink>
 

@@ -11,9 +11,9 @@ const Home: NextPage = () => {
                 <a
                     {...rest}
                     target="_blank"
-                    className="grow lg:grow-0 border-2 dark:border-orange-500 border-zinc-800 text-center"
+                    className="grow border-2 rounded-lg dark:border-orange-500 border-zinc-800 text-center hover:bg-black dark:hover:bg-orange-500 hover:text-white dark:text-orange-500 dark:hover:text-zinc-900 text-gray-800"
                 >
-                    <button className="hover:bg-black hover:text-white dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-zinc-900 p-2 font-semibold text-gray-800 inline-flex space-x-2 rounded">
+                    <button className="p-2 font-semibold inline-flex">
                         {children}
                     </button>
                 </a>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
                             src="https://github.com/al-gilang-p.png"
                             alt="Picture of the author"
                             layout="fill"
-                            className="lg:rounded-l-xl lg:rounded-r-none lg:rounded-t-none rounded-full aspect-square object-cover"
+                            className="lg:rounded-l-xl lg:rounded-r-none rounded-full aspect-square object-cover"
                         />
                     </div>
                 </div>
