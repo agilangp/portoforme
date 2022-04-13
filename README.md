@@ -32,7 +32,10 @@ This project require [Node.js](https://nodejs.org/) to run.
 
 Clone this repo and run in development
 
-`npm run dev`
+```
+npm install
+npm run dev
+```
 
 ## Project Status
 
