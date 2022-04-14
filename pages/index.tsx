@@ -20,6 +20,7 @@ const Home: NextPage = () => {
             </Link>
         )
     }
+
     return (
         <Layout>
             <div className="lg:grid lg:grid-cols-4 flex flex-col rounded-xl border-2 dark:border-zinc-800 shadow-sm">
@@ -117,6 +118,7 @@ const Home: NextPage = () => {
                     </div>
                 </div>
             </div>
+
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     About
@@ -136,6 +138,7 @@ const Home: NextPage = () => {
                     Based in Magetan Regency, East Java, Indonesia
                 </p>
             </div>
+
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Bio
@@ -180,6 +183,16 @@ const Home: NextPage = () => {
                     <li>PHP, Laravel, MySQL</li>
                     <li>NodeJS, Express, MySQL</li>
                 </ul>
+            </div>
+
+            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+                <form action="" method="post">
+                    <div>
+                        <input type="text" name="name" />
+                        <input type="email" name="email" />
+                    </div>
+                    <textarea name="message"></textarea>
+                </form>
             </div>
         </Layout>
     )
