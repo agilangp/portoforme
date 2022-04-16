@@ -1,9 +1,27 @@
 import type { NextPage } from "next"
 import Image from "next/image"
 import Link from "next/link"
+import { useCallback, useState } from "react"
 import Layout from "../components/Layout"
 
 const Home: NextPage = () => {
+    const [formContent, setFormContent] = useState({
+        name: "",
+        email: "",
+        message: "",
+    })
+
+    const handleOnFormChange = useCallback(
+        (e) => {
+            const { value, name } = e.target
+            setFormContent({
+                ...formContent,
+                [name]: value,
+            })
+        },
+        [formContent, setFormContent]
+    )
+
     const IconLink = (props: any) => {
         let { href, children, ...rest } = props
         return (
@@ -186,12 +204,45 @@ const Home: NextPage = () => {
             </div>
 
             <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+                <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
+                    Contact Me
+                </p>
                 <form action="" method="post">
-                    <div>
-                        <input type="text" name="name" />
-                        <input type="email" name="email" />
-                    </div>
-                    <textarea name="message"></textarea>
+                    <label htmlFor="name" className="font-semibold">
+                        Name<span className="text-red-600">*</span>
+                    </label>
+                    <input
+                        className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-700 shadow-sm mb-2"
+                        type="text"
+                        name="name"
+                        onChange={handleOnFormChange}
+                        required
+                    />
+                    <label htmlFor="email" className="font-semibold">
+                        Email<span className="text-red-600">*</span>
+                    </label>
+                    <input
+                        className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-700 shadow-sm mb-2"
+                        type="email"
+                        name="email"
+                        onChange={handleOnFormChange}
+                        required
+                    />
+                    <label htmlFor="message" className="font-semibold">
+                        Message<span className="text-red-600">*</span>
+                    </label>
+                    <textarea
+                        className="h-40 p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-700 shadow-sm mb-4"
+                        name="message"
+                        onChange={handleOnFormChange}
+                        required
+                    ></textarea>
+                    <button
+                        className="block mx-auto w-full lg:w-auto text-sm rounded-xl p-2 border-2 border-zinc-800 hover:text-white hover:bg-zinc-800 font-semibold dark:text-orange-500 dark:border-orange-500 dark:hover:text-zinc-800 dark:hover:bg-orange-500"
+                        type="submit"
+                    >
+                        Send Message
+                    </button>
                 </form>
             </div>
         </Layout>
