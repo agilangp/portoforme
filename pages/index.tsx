@@ -104,7 +104,7 @@ const Home: NextPage = () => {
 
     return (
         <Layout>
-            <div className="lg:grid lg:grid-cols-4 flex flex-col rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+            <div className="bg-white dark:bg-zinc-900 lg:grid lg:grid-cols-4 flex flex-col rounded-xl shadow-xl">
                 <div className="flex flex-wrap justify-center pt-4 lg:pt-0">
                     <div className="w-80 h-80 lg:w-full lg:h-full relative fill-current">
                         <Image
@@ -200,7 +200,7 @@ const Home: NextPage = () => {
                 </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     About
                 </p>
@@ -220,7 +220,7 @@ const Home: NextPage = () => {
                 </p>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Bio
                 </p>
@@ -253,7 +253,7 @@ const Home: NextPage = () => {
                 </table>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Tech Stack
                 </p>
@@ -266,7 +266,7 @@ const Home: NextPage = () => {
                 </ul>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl border-2 dark:border-zinc-800 shadow-sm">
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Contact Me
                 </p>
@@ -285,7 +285,7 @@ const Home: NextPage = () => {
                         {formStatus.info.msg}
                         <button
                             onClick={resetForm}
-                            className="mt-2 block mx-auto w-full lg:w-auto text-sm rounded-xl p-2 border-2 border-zinc-800 hover:text-white hover:bg-zinc-800 font-semibold dark:text-orange-500 dark:border-orange-500 dark:hover:text-zinc-800 dark:hover:bg-orange-500"
+                            className="mt-2 block mx-auto w-full lg:w-auto text-sm rounded-xl p-2 text-white hover:bg-zinc-800 font-semibold dark:text-orange-500 dark:border-orange-500 dark:hover:text-zinc-800 dark:hover:bg-orange-500"
                         >
                             Send Another Message
                         </button>
@@ -297,27 +297,29 @@ const Home: NextPage = () => {
                             Name<span className="text-red-600">*</span>
                         </label>
                         <input
-                            className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-700 shadow-sm mb-2"
+                            className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-800 shadow-sm mb-2"
                             type="text"
                             name="name"
                             onChange={handleOnFormChange}
+                            autoComplete="off"
                             required
                         />
                         <label htmlFor="email" className="font-semibold">
                             Email<span className="text-red-600">*</span>
                         </label>
                         <input
-                            className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-700 shadow-sm mb-2"
+                            className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-800 shadow-sm mb-2"
                             type="email"
                             name="email"
                             onChange={handleOnFormChange}
+                            autoComplete="off"
                             required
                         />
                         <label htmlFor="message" className="font-semibold">
                             Message<span className="text-red-600">*</span>
                         </label>
                         <textarea
-                            className="h-40 p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-700 shadow-sm mb-4"
+                            className="h-40 p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-800 shadow-sm mb-4"
                             name="message"
                             onChange={handleOnFormChange}
                             required

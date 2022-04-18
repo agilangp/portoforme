@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => {
 
     return (
         <div className={`${darkMode ? "dark" : ""}`}>
-            <div className="dark:bg-zinc-900 dark:text-zinc-300">
+            <div className="dark:bg-zinc-800 bg-gray-100 dark:text-zinc-300">
                 <Header />
                 <main className="min-h-screen flex flex-col justify-between">
                     <Navbar changeMode={changeMode} darkMode={darkMode} />
