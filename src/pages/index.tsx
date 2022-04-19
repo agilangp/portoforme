@@ -109,6 +109,7 @@ const Home: NextPage = () => {
                 whileInView={{ y: 0, scale: 1 }}
                 transition={{ type: "spring" }}
                 initial={{ y: -50, scale: 0.8 }}
+                viewport={{ once: true }}
                 className="bg-white dark:bg-zinc-900 lg:grid lg:grid-cols-4 flex flex-col rounded-xl shadow-xl"
             >
                 <div className="flex flex-wrap justify-center pt-4 lg:pt-0">
@@ -210,6 +211,7 @@ const Home: NextPage = () => {
                 whileInView={{ y: 0, scale: 1 }}
                 transition={{ type: "spring" }}
                 initial={{ y: -50, scale: 0.8 }}
+                viewport={{ once: true }}
                 className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
             >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
@@ -235,6 +237,7 @@ const Home: NextPage = () => {
                 whileInView={{ y: 0, scale: 1 }}
                 transition={{ type: "spring" }}
                 initial={{ y: -50, scale: 0.8 }}
+                viewport={{ once: true }}
                 className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
             >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
@@ -273,6 +276,7 @@ const Home: NextPage = () => {
                 whileInView={{ y: 0, scale: 1 }}
                 transition={{ type: "spring" }}
                 initial={{ y: -50, scale: 0.8 }}
+                viewport={{ once: true }}
                 className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
             >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
@@ -291,6 +295,7 @@ const Home: NextPage = () => {
                 whileInView={{ y: 0, scale: 1 }}
                 transition={{ type: "spring" }}
                 initial={{ y: -100, scale: 0.8 }}
+                viewport={{ once: true }}
                 className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
             >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
