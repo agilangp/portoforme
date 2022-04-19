@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useCallback, useState } from "react"
 import Layout from "../components/Layout"
+import { motion } from "framer-motion"
 
 const Home: NextPage = () => {
     const [formStatus, setFormStatus] = useState({
@@ -104,7 +105,12 @@ const Home: NextPage = () => {
 
     return (
         <Layout>
-            <div className="bg-white dark:bg-zinc-900 lg:grid lg:grid-cols-4 flex flex-col rounded-xl shadow-xl">
+            <motion.div
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ type: "spring" }}
+                initial={{ y: -50, scale: 0.8 }}
+                className="bg-white dark:bg-zinc-900 lg:grid lg:grid-cols-4 flex flex-col rounded-xl shadow-xl"
+            >
                 <div className="flex flex-wrap justify-center pt-4 lg:pt-0">
                     <div className="w-80 h-80 lg:w-full lg:h-full relative fill-current">
                         <Image
@@ -198,9 +204,14 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
+            <motion.div
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ type: "spring" }}
+                initial={{ y: -50, scale: 0.8 }}
+                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
+            >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     About
                 </p>
@@ -218,9 +229,14 @@ const Home: NextPage = () => {
                 <p className="font-bold mt-4">
                     Based in Magetan Regency, East Java, Indonesia
                 </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
+            <motion.div
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ type: "spring" }}
+                initial={{ y: -50, scale: 0.8 }}
+                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
+            >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Bio
                 </p>
@@ -251,9 +267,14 @@ const Home: NextPage = () => {
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </motion.div>
 
-            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
+            <motion.div
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ type: "spring" }}
+                initial={{ y: -50, scale: 0.8 }}
+                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
+            >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Tech Stack
                 </p>
@@ -264,9 +285,14 @@ const Home: NextPage = () => {
                     <li>PHP, Laravel, MySQL</li>
                     <li>NodeJS, Express, MySQL</li>
                 </ul>
-            </div>
+            </motion.div>
 
-            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
+            <motion.div
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ type: "spring" }}
+                initial={{ y: -100, scale: 0.8 }}
+                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
+            >
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Contact Me
                 </p>
@@ -332,7 +358,7 @@ const Home: NextPage = () => {
                         </button>
                     </form>
                 )}
-            </div>
+            </motion.div>
         </Layout>
     )
 }

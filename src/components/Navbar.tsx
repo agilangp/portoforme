@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
 import { Switch } from "@headlessui/react"
+import { motion } from "framer-motion"
 
 interface NavbarProps {
     darkMode: boolean
@@ -56,6 +57,23 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                 </a>
             </Link>
         )
+    }
+
+    const menuVariants = {
+        open: {
+            opacity: 1,
+            display: "block",
+            transition: {
+                duration: 0.5,
+            },
+        },
+        closed: {
+            opacity: 0,
+            display: "none",
+            transition: {
+                duration: 0.5,
+            },
+        },
     }
 
     return (
@@ -155,8 +173,11 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                 </div>
             </div>{" "}
             <hr className="dark:border-zinc-800" />
-            <div
-                className={` ${menuIsOpen ? "" : "hidden"} text-sm text-center`}
+            <motion.div
+                className="text-sm text-center"
+                initial="closed"
+                animate={menuIsOpen ? "open" : "closed"}
+                variants={menuVariants}
                 id="menu"
                 ref={menu}
             >
@@ -169,7 +190,7 @@ const Navbar = ({ changeMode, darkMode }: NavbarProps) => {
                 >
                     SOURCES
                 </PopUpMenuLink>
-            </div>
+            </motion.div>
         </nav>
     )
 }
