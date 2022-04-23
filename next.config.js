@@ -4,7 +4,11 @@ const nextConfig = {
     images: {
         domains: ["github.com"],
     },
-    swcMinify: false
+    swcMinify: true,
+    i18n: {
+        locales: ["en"],
+        defaultLocale: "en",
+    },
 }
 
 module.exports = nextConfig
