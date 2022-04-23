@@ -3,7 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { useCallback, useState } from "react"
 import Layout from "../components/Layout"
-import { motion } from "framer-motion"
 
 const Home: NextPage = () => {
     const [formStatus, setFormStatus] = useState({
@@ -105,13 +104,7 @@ const Home: NextPage = () => {
 
     return (
         <Layout>
-            <motion.div
-                whileInView={{ y: 0, scale: 1 }}
-                transition={{ type: "spring" }}
-                initial={{ y: -50, scale: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-zinc-900 lg:grid lg:grid-cols-4 flex flex-col rounded-xl shadow-xl"
-            >
+            <div className="bg-white dark:bg-zinc-900 lg:grid lg:grid-cols-4 flex flex-col rounded-xl shadow-xl">
                 <div className="flex flex-wrap justify-center pt-4 lg:pt-0">
                     <div className="w-80 h-80 lg:w-full lg:h-full relative fill-current">
                         <Image
@@ -205,15 +198,9 @@ const Home: NextPage = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-                whileInView={{ y: 0, scale: 1 }}
-                transition={{ type: "spring" }}
-                initial={{ y: -50, scale: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
-            >
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     About
                 </p>
@@ -231,15 +218,9 @@ const Home: NextPage = () => {
                 <p className="font-bold mt-4">
                     Based in Magetan Regency, East Java, Indonesia
                 </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-                whileInView={{ y: 0, scale: 1 }}
-                transition={{ type: "spring" }}
-                initial={{ y: -50, scale: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
-            >
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Bio
                 </p>
@@ -270,15 +251,9 @@ const Home: NextPage = () => {
                         </tr>
                     </tbody>
                 </table>
-            </motion.div>
+            </div>
 
-            <motion.div
-                whileInView={{ y: 0, scale: 1 }}
-                transition={{ type: "spring" }}
-                initial={{ y: -50, scale: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
-            >
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Tech Stack
                 </p>
@@ -289,15 +264,9 @@ const Home: NextPage = () => {
                     <li>PHP, Laravel, MySQL</li>
                     <li>NodeJS, Express, MySQL</li>
                 </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-                whileInView={{ y: 0, scale: 1 }}
-                transition={{ type: "spring" }}
-                initial={{ y: -100, scale: 0.8 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl"
-            >
+            <div className="bg-white dark:bg-zinc-900 mt-6 p-4 rounded-xl shadow-xl">
                 <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
                     Contact Me
                 </p>
@@ -328,7 +297,7 @@ const Home: NextPage = () => {
                             Name<span className="text-red-600">*</span>
                         </label>
                         <input
-                            className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-800 shadow-sm mb-2"
+                            className="p-2 w-full shadow-inner rounded-xl dark:bg-zinc-800 mb-2 bg-gray-100"
                             type="text"
                             name="name"
                             onChange={handleOnFormChange}
@@ -339,7 +308,7 @@ const Home: NextPage = () => {
                             Email<span className="text-red-600">*</span>
                         </label>
                         <input
-                            className="p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-800 shadow-sm mb-2"
+                            className="p-2 w-full shadow-inner rounded-xl dark:bg-zinc-800 mb-2 bg-gray-100"
                             type="email"
                             name="email"
                             onChange={handleOnFormChange}
@@ -350,7 +319,7 @@ const Home: NextPage = () => {
                             Message<span className="text-red-600">*</span>
                         </label>
                         <textarea
-                            className="h-40 p-2 w-full border-2 dark:border-none rounded-xl dark:bg-zinc-800 shadow-sm mb-4"
+                            className="h-40 p-2 w-full shadow-inner rounded-xl dark:bg-zinc-800 mb-2 bg-gray-100"
                             name="message"
                             onChange={handleOnFormChange}
                             required
@@ -363,7 +332,7 @@ const Home: NextPage = () => {
                         </button>
                     </form>
                 )}
-            </motion.div>
+            </div>
         </Layout>
     )
 }
