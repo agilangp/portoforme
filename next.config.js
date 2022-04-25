@@ -5,10 +5,6 @@ const nextConfig = {
         domains: ["github.com"],
     },
     swcMinify: true,
-    i18n: {
-        locales: ["en"],
-        defaultLocale: "en",
-    },
 }
 
 module.exports = nextConfig

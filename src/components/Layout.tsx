@@ -37,24 +37,22 @@ const Layout = ({ children }: LayoutProps) => {
     }
 
     return (
-        <div className={`${darkMode ? "dark" : ""}`}>
-            <div className="dark:bg-zinc-800 bg-gray-100 dark:text-zinc-300">
-                <Header />
-                <main className="min-h-screen flex flex-col justify-between">
-                    <Navbar changeMode={changeMode} darkMode={darkMode} />
-                    <motion.div
-                        animate={{ y: 0, scale: 1 }}
-                        transition={{ type: "spring" }}
-                        initial={{ y: 50, scale: 0.8 }}
-                        viewport={{ once: true }}
-                        className="py-6 container mx-auto px-4 sm:px-0 sm:w-9/12"
-                    >
-                        {children}
-                    </motion.div>
-                    <Footer />
-                </main>
-            </div>
-        </div>
+        <>
+            <Header />
+            <main className="min-h-screen flex flex-col justify-between">
+                <Navbar changeMode={changeMode} darkMode={darkMode} />
+                <motion.div
+                    animate={{ y: 0, scale: 1 }}
+                    transition={{ type: "spring" }}
+                    initial={{ y: 50, scale: 0.8 }}
+                    viewport={{ once: true }}
+                    className="py-6 container mx-auto px-4 sm:px-0 sm:w-9/12"
+                >
+                    {children}
+                </motion.div>
+                <Footer />
+            </main>
+        </>
     )
 }
 
