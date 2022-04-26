@@ -50,7 +50,7 @@ const ThemeSwitch = () => {
                 onChange={handleChangeMode}
                 className={`${
                     dark
-                        ? "bg-orange-500 hover:bg-black"
+                        ? "bg-orange-500 hover:bg-zinc-500"
                         : "bg-gray-800 hover:bg-orange-500 "
                 } relative inline-flex items-center h-6 rounded-full w-11`}
             >
