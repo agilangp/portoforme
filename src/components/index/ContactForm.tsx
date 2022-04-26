@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import Card from "./Card"
 
 const ContactForm = () => {
     const [formStatus, setFormStatus] = useState({
@@ -82,10 +83,7 @@ const ContactForm = () => {
     }
 
     return (
-        <>
-            <p className="lg:text-left text-center mb-2 font-semibold underline text-2xl decoration-orange-500">
-                Contact Me
-            </p>
+        <Card title="Contact Me">
             {formStatus.submitting && (
                 <p className="text-orange-500 text-center my-4 font-bold text-lg">
                     Submitting...
@@ -151,7 +149,7 @@ const ContactForm = () => {
                     </button>
                 </form>
             )}
-        </>
+        </Card>
     )
 }
 

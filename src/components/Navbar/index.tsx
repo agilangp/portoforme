@@ -47,7 +47,7 @@ const Navbar = () => {
 
     return (
         <nav className="sticky top-0 z-50 shadow-md bg-white dark:bg-zinc-900">
-            <div className="container mx-auto py-4 px-4 sm:px-0 sm:w-9/12 flex flex-wrap items-center place-content-between">
+            <div className="container py-4 px-4 mx-auto sm:px-0 sm:w-9/12 flex flex-wrap items-center place-content-between">
                 <Link href="/">
                     <a className="flex items-center place-content-center hover:text-orange-500 cursor-pointer">
                         <svg
@@ -97,7 +97,7 @@ const Navbar = () => {
                         />
                     </svg>
                 </div>
-            </div>{" "}
+            </div>
             <hr className="dark:border-zinc-800" />
             <motion.div
                 className="text-sm text-center"
