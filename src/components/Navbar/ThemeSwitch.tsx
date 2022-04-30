@@ -41,7 +41,7 @@ const ThemeSwitch = () => {
         }
     }, [])
 
-    if (!mounted) return null
+    if (!mounted) return <>Loading...</>
 
     return (
         <>
