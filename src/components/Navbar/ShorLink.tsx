@@ -6,7 +6,7 @@ const ShortLink = (props: any) => {
         <Link href={href}>
             <a
                 {...rest}
-                className="p-3 mx-4 font-semibold hover:underline hover:text-orange-500"
+                className="uppercase p-3 mx-4 font-semibold hover:underline hover:text-orange-500"
             >
                 {children}
             </a>

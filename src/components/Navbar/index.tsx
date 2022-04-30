@@ -2,6 +2,7 @@ import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
 import ThemeSwitch from "./ThemeSwitch"
+import { MENU } from "../../const"
 import ShortLink from "./ShorLink"
 import PopUpMenuLink from "./PopUpMenuLink"
 
@@ -30,6 +31,7 @@ const Navbar = () => {
 
     const menuVariants = {
         open: {
+            animate: "spring",
             opacity: 1,
             display: "block",
             transition: {
@@ -71,13 +73,17 @@ const Navbar = () => {
                     </a>
                 </Link>
                 <div className="lg:flex hidden text-sm">
-                    <ShortLink href="/project">PROJECT</ShortLink>
-                    <ShortLink
-                        href="https://github.com/al-gilang-p"
-                        target="_blank"
-                    >
-                        SOURCES
-                    </ShortLink>
+                    {MENU.map((item) => {
+                        return (
+                            <div key={item.id}>
+                                <ShortLink
+                                    href={"/" + item.title.toLowerCase()}
+                                >
+                                    {item.title}
+                                </ShortLink>
+                            </div>
+                        )
+                    })}
                 </div>
                 <div className="flex items-center place-content-center">
                     <ThemeSwitch />
@@ -107,15 +113,18 @@ const Navbar = () => {
                 id="menu"
                 ref={menu}
             >
-                <PopUpMenuLink href="/project">PROJECT</PopUpMenuLink>
-
-                <hr className="dark:border-zinc-800" />
-                <PopUpMenuLink
-                    href="https://github.com/al-gilang-p"
-                    target="_blank"
-                >
-                    SOURCES
-                </PopUpMenuLink>
+                {MENU.map((item) => {
+                    return (
+                        <div key={item.id}>
+                            <PopUpMenuLink
+                                href={"/" + item.title.toLowerCase()}
+                            >
+                                {item.title}
+                            </PopUpMenuLink>
+                            <hr className="dark:border-zinc-800" />
+                        </div>
+                    )
+                })}
             </motion.div>
         </nav>
     )

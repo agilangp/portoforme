@@ -6,7 +6,7 @@ const PopUpMenuLink = (props: any) => {
         <Link href={href}>
             <a
                 {...rest}
-                className="inline-block p-3 font-semibold hover:underline hover:text-orange-500"
+                className="uppercase inline-block p-3 font-semibold hover:underline hover:text-orange-500"
             >
                 {children}
             </a>
