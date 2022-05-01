@@ -5,6 +5,7 @@ import ThemeSwitch from "./ThemeSwitch"
 import { MENU } from "../../const"
 import ShortLink from "./ShorLink"
 import PopUpMenuLink from "./PopUpMenuLink"
+import { FaBars, FaCheckDouble } from "react-icons/fa"
 
 const Navbar = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -31,7 +32,6 @@ const Navbar = () => {
 
     const menuVariants = {
         open: {
-            animate: "spring",
             opacity: 1,
             display: "block",
             transition: {
@@ -52,20 +52,7 @@ const Navbar = () => {
             <div className="container py-4 px-4 mx-auto sm:px-0 sm:w-9/12 flex flex-wrap items-center place-content-between">
                 <Link href="/">
                     <a className="flex items-center place-content-center hover:text-orange-500 cursor-pointer">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 22 22"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                        </svg>
+                        <FaCheckDouble size={25} />
                         <span className="font-bold text-3xl ml-2">
                             PortoFor
                             <span className="text-orange-500">Me</span>
@@ -87,21 +74,11 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center place-content-center">
                     <ThemeSwitch />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 mx-2 cursor-pointer lg:hidden"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
+                    <FaBars
+                        size={25}
                         onClick={handleMenuClick}
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        />
-                    </svg>
+                        className="cursor-pointer lg:hidden ml-1"
+                    />
                 </div>
             </div>
             <hr className="dark:border-zinc-800" />
