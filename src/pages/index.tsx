@@ -13,7 +13,7 @@ const Home: NextPage = () => {
                 <title>Alwin Gilang Permana - Portofolio</title>
                 <meta
                     name="description"
-                    content="Portofolio of Alwin Gilang Permana"
+                    content="Portoforme - Portofolio of Alwin Gilang Permana"
                 />
             </Head>
             <Quote />
