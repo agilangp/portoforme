@@ -30,7 +30,7 @@ const Quote = () => {
                     <p className="font-semibold text-xl dark:text-zinc-400 italic">
                         Software Developer
                     </p>
-                    <p className="font-medium text-2xl py-8 lg:text-right">{`"Here lies My Hopes and Dreams about something I truly love. I know it ain't much, but it's honest work"`}</p>
+                    <p className="font-medium text-2xl py-8 lg:text-right">{`"Here lies my hopes and dreams about things I truly love. I know it ain't much, but it's honest work"`}</p>
                 </div>
                 <div>
                     <hr className="dark:border-zinc-800" />
