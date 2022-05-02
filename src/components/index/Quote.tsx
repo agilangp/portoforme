@@ -37,31 +37,31 @@ const Quote = () => {
                     <div className="flex flex-wrap gap-2 p-4 justify-center lg:justify-start">
                         <IconLink
                             href="https://www.instagram.com/alwin_gilang/"
-                            name="instagram-button"
+                            aria-label="instagram-button"
                         >
                             <FaInstagram size={25} />
                         </IconLink>
                         <IconLink
                             href="https://web.facebook.com/al.gilang.p"
-                            name="facebook-button"
+                            aria-label="facebook-button"
                         >
                             <FaFacebook size={25} />
                         </IconLink>
                         <IconLink
                             href="https://twitter.com/alwin_gilang"
-                            name="twitter-button"
+                            aria-label="twitter-button"
                         >
                             <FaTwitter size={25} />
                         </IconLink>
                         <IconLink
                             href="https://github.com/al-gilang-p"
-                            name="github-button"
+                            aria-label="github-button"
                         >
                             <FaGithub size={25} />
                         </IconLink>
                         <IconLink
                             href="https://www.linkedin.com/in/alwin-gilang-permana-53674b170"
-                            name="linkedin-button"
+                            aria-label="linkedin-button"
                         >
                             <FaLinkedin size={25} />
                         </IconLink>
