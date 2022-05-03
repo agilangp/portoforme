@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
                     transition={{ type: "spring" }}
                     initial={{ y: 50 }}
                     viewport={{ once: true }}
-                    className="py-6 container mx-auto px-4 sm:px-0 sm:w-9/12"
+                    className="py-6 container mx-auto px-4 sm:px-0 sm:w-9/12 flex-auto"
                 >
                     {children}
                 </motion.div>

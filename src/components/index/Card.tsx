@@ -1,5 +1,5 @@
 interface CardProps {
-    title: string
+    title?: string
     children: React.ReactNode
 }
 const Card = ({ title, children }: CardProps) => {
