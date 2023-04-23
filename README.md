@@ -11,7 +11,7 @@
 -   [Usage](#usage)
 -   [Project Status](#project-status)
 -   [Contact](#contact)
-<!-- * [License](#license) -->
+-   [License](#license)
 
 ## Technologies Used
 
