@@ -41,10 +41,6 @@ npm run dev
 
 Project is: _complete_ with ongoing improvement.
 
-To do:
-
--   Add CMS for project section
-
 ## Contact
 
 Created by [@al-gilang-p](https://portoforme.vercel.app/) - feel free to contact me!
