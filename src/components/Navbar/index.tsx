@@ -1,11 +1,11 @@
-import Link from "next/link"
-import { useEffect, useState, useRef } from "react"
-import { motion } from "framer-motion"
-import ThemeSwitch from "./ThemeSwitch"
-import { MENU } from "../../constants"
-import ShortLink from "./ShorLink"
-import PopUpMenuLink from "./PopUpMenuLink"
-import { FaBars, FaCheckDouble } from "react-icons/fa"
+import Link from 'next/link'
+import { useEffect, useState, useRef } from 'react'
+import { motion } from 'framer-motion'
+import ThemeSwitch from './ThemeSwitch'
+import { MENU } from '../../constants'
+import ShortLink from './ShorLink'
+import PopUpMenuLink from './PopUpMenuLink'
+import { FaBars, FaCheckDouble } from 'react-icons/fa'
 
 const Navbar = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -22,8 +22,8 @@ const Navbar = () => {
             }
         }
 
-        window.addEventListener("click", handleClick)
-        return () => window.removeEventListener("click", handleClick)
+        window.addEventListener('click', handleClick)
+        return () => window.removeEventListener('click', handleClick)
     }, [menuIsOpen])
 
     const handleMenuClick = () => {
@@ -33,14 +33,14 @@ const Navbar = () => {
     const menuVariants = {
         open: {
             opacity: 1,
-            display: "block",
+            display: 'block',
             transition: {
                 duration: 0.5,
             },
         },
         closed: {
             opacity: 0,
-            display: "none",
+            display: 'none',
             transition: {
                 duration: 0.5,
             },
@@ -63,9 +63,7 @@ const Navbar = () => {
                     {MENU.map((item) => {
                         return (
                             <div key={item.id}>
-                                <ShortLink
-                                    href={"/" + item.title.toLowerCase()}
-                                >
+                                <ShortLink href={item.url}>
                                     {item.title}
                                 </ShortLink>
                             </div>
@@ -85,7 +83,7 @@ const Navbar = () => {
             <motion.div
                 className="text-sm text-center"
                 initial="closed"
-                animate={menuIsOpen ? "open" : "closed"}
+                animate={menuIsOpen ? 'open' : 'closed'}
                 variants={menuVariants}
                 id="menu"
                 ref={menu}
@@ -93,9 +91,7 @@ const Navbar = () => {
                 {MENU.map((item) => {
                     return (
                         <div key={item.id}>
-                            <PopUpMenuLink
-                                href={"/" + item.title.toLowerCase()}
-                            >
+                            <PopUpMenuLink href={item.url}>
                                 {item.title}
                             </PopUpMenuLink>
                             <hr className="dark:border-zinc-800" />

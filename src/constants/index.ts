@@ -1,10 +1,12 @@
 export const MENU = [
     {
         id: 1,
-        title: "Articles",
+        title: 'Home',
+        url: '/',
     },
     {
         id: 2,
-        title: "Projects",
+        title: 'Projects',
+        url: '/projects',
     },
 ]
