@@ -1,14 +1,12 @@
-import Card from "./Card"
+import Card from './Card'
 
 const About = () => {
     return (
-        <Card title="About">
+        <Card title="Hello There">
             <p className="text-justify">
-                <b className="text-orange-500">Gilang</b> is a man of focus,
-                commitment, and sheer willpower for his passion about
-                programming. Currently, software development is rapidly growing
-                skill of him which categorized him as a full-stack software
-                developer.
+                Hi my name is<b className="text-orange-500"> Gilang</b>. I am a
+                software developer. Passionate about web development and
+                drawing.
             </p>
             <p className="font-bold mt-4">
                 Based in Magetan Regency, East Java, Indonesia
