@@ -1,5 +1,7 @@
-import { useCallback, useState } from "react"
-import Card from "./Card"
+'use client'
+
+import { useCallback, useState } from 'react'
+import Card from './Card'
 
 const ContactForm = () => {
     const [formStatus, setFormStatus] = useState({
@@ -9,9 +11,9 @@ const ContactForm = () => {
     })
 
     const [formContent, setFormContent] = useState({
-        name: "",
-        email: "",
-        message: "",
+        name: '',
+        email: '',
+        message: '',
     })
 
     const handleOnFormChange = useCallback(
@@ -33,9 +35,9 @@ const ContactForm = () => {
                 info: { error: false, msg },
             })
             setFormContent({
-                name: "",
-                email: "",
-                message: "",
+                name: '',
+                email: '',
+                message: '',
             })
         } else {
             setFormStatus({
@@ -54,18 +56,18 @@ const ContactForm = () => {
                 submitting: true,
             }))
             fetch(
-                "https://formsubmit.co/ajax/5c0501dde9c873ce6d07be630af3a25d",
+                'https://formsubmit.co/ajax/5c0501dde9c873ce6d07be630af3a25d',
                 {
-                    method: "POST",
+                    method: 'POST',
                     headers: {
-                        "Content-Type": "application/json",
-                        Accept: "application/json",
+                        'Content-Type': 'application/json',
+                        Accept: 'application/json',
                     },
                     body: JSON.stringify(formContent),
                 }
             )
                 .then((response) => {
-                    handleServerResponse(true, "Your Message has been sent.")
+                    handleServerResponse(true, 'Your Message has been sent.')
                 })
                 .catch((error) =>
                     handleServerResponse(false, `Error: ${error.message}`)

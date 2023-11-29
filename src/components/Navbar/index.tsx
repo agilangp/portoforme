@@ -1,6 +1,7 @@
+'use client'
+
 import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
-import { motion } from 'framer-motion'
 import ThemeSwitch from './ThemeSwitch'
 import { MENU } from '../../constants'
 import ShortLink from './ShorLink'
@@ -30,34 +31,19 @@ const Navbar = () => {
         setMenuIsOpen(!menuIsOpen)
     }
 
-    const menuVariants = {
-        open: {
-            opacity: 1,
-            display: 'block',
-            transition: {
-                duration: 0.5,
-            },
-        },
-        closed: {
-            opacity: 0,
-            display: 'none',
-            transition: {
-                duration: 0.5,
-            },
-        },
-    }
-
     return (
         <nav className="sticky top-0 z-50 shadow-md bg-white dark:bg-zinc-900">
             <div className="container py-4 px-4 mx-auto sm:px-0 sm:w-9/12 flex flex-wrap items-center place-content-between">
-                <Link href="/">
-                    <a className="flex items-center place-content-center hover:text-orange-500 cursor-pointer">
-                        <FaCheckDouble size={25} />
-                        <span className="font-bold text-3xl ml-2">
-                            PortoFor
-                            <span className="text-orange-500">Me</span>
-                        </span>
-                    </a>
+                <Link
+                    href="/"
+                    className="flex items-center place-content-center hover:text-orange-500 cursor-pointer"
+                    passHref
+                >
+                    <FaCheckDouble size={25} />
+                    <span className="font-bold text-3xl ml-2">
+                        PortoFor
+                        <span className="text-orange-500">Me</span>
+                    </span>
                 </Link>
                 <div className="lg:flex hidden text-sm">
                     {MENU.map((item) => {
@@ -80,14 +66,7 @@ const Navbar = () => {
                 </div>
             </div>
             <hr className="dark:border-zinc-800" />
-            <motion.div
-                className="text-sm text-center"
-                initial="closed"
-                animate={menuIsOpen ? 'open' : 'closed'}
-                variants={menuVariants}
-                id="menu"
-                ref={menu}
-            >
+            <div className="text-sm text-center hidden" id="menu" ref={menu}>
                 {MENU.map((item) => {
                     return (
                         <div key={item.id}>
@@ -98,7 +77,7 @@ const Navbar = () => {
                         </div>
                     )
                 })}
-            </motion.div>
+            </div>
         </nav>
     )
 }
