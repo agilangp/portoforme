@@ -14,7 +14,7 @@ const Quote = () => {
             <div className="flex flex-wrap justify-center pt-4 lg:pt-0">
                 <div className="w-80 h-80 lg:w-full lg:h-full relative fill-current">
                     <Image
-                        src="https://github.com/al-gilang-p.png"
+                        src="https://github.com/agilangp.png"
                         alt="Picture of the author"
                         layout="fill"
                         className="lg:rounded-l-xl lg:rounded-r-none rounded-full aspect-square object-cover"
